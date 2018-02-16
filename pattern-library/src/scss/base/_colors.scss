@@ -1,0 +1,30 @@
+
+// Color Palettes
+// palette(green, dark);
+
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+$palettes: (
+    green: (
+        base: #00FF6E,
+    ),
+    red: (
+        base: #FF5A5F
+    ),
+    blue: (
+        base: #008CFF
+    ),
+    grey: (
+        base: #c2c2c2,
+        light: #f2f2f2,
+        dark: #919191,
+    ),
+    black: (
+        base: #000,
+    ),
+    white: (
+        base: #fff
+    )
+);

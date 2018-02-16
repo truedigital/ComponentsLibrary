@@ -1,0 +1,20 @@
+// Adds an underlining to the bottom of the target, which expands over multiple lines
+@mixin underexpand($color: white, $height: 3px, $distance: 1px) {
+    display: inline; // Needed to make the background go over 2 lines
+    // Using background underline method to try to make our underline work on multiple lines...
+    padding-bottom: $distance;
+    background-image: linear-gradient(to right, $color 0%, $color 100%);
+    background-position: 50% 100%;
+    background-size: 0 $height;
+    background-repeat: no-repeat;//repeat-x;
+    transition: all 150ms ease-in-out;
+
+    &:hover, &.active {
+        @include underexpand-hover($color, $height);
+    }
+}
+
+// Splitting out, so we can trigger underexpand hover from parent easily...
+@mixin underexpand-hover($color: white, $height: 3px) {
+    background-size: 100% $height;
+}

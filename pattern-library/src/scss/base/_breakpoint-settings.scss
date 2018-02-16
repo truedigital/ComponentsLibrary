@@ -1,0 +1,22 @@
+// === BREAKPOINT SETTINGS
+// Mixin: sass-mq (enhanced fork)
+// Docs: https://github.com/mcaskill/sass-mq
+// This is an enhanced fork of sass-mq, which adds $or and allows height based queries
+
+// EXAMPLE
+//  @include mq(mobile, tablet-wide) { }
+//  @include mq($from: tablet, $or: mq($until: mobile)) { }
+//  @include mq($from: 600px, $media-feature: height) { }
+
+$mq-breakpoints: (
+    mobile:  320px,
+    mobile-wide: 480px,
+    tablet: 750px,
+    tablet-wide:  980px,
+    desktop: 1030px,
+    wide:    1300px,
+);
+
+// Breakpoints in list will be displayed top right
+
+$mq-show-breakpoints: (mobile, mobile-wide, tablet, tablet-wide, desktop, wide);

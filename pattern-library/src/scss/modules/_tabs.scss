@@ -1,0 +1,44 @@
+.tabs-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+
+    li {
+        display: block;
+        float: left;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.tabs-list__trigger {
+    transition: all .3s ease-out;
+    display: block;
+}
+
+.tab-panel {
+    display: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.active {
+        display: block;
+        animation: componentsFadeIn 1s;
+    }
+}
+
+.tabs-list--classic,
+.tabs-list--arrows {
+    .tabs-list__trigger {
+        border: 1px solid lighten(palette(grey), 20%);
+        @include line-height(20);
+        color: palette(grey, dark);
+        box-shadow: 0 0 3px lighten(palette(grey), 20%);
+    }
+}

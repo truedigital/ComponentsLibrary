@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+$environment: 'dev';
+
+// === HELPERS
+@import "base/functions";
+@import "base/mixins/**";
+
+// === SETTINGS
+@import "base/colors";
+@import "base/breakpoint-settings";
+@import "base/vendor-settings";
+@import "base/fonts";
+
+// === BASE
+@import "base/normalize";
+@import "base/mixins/mq";
+@import "base/base";
+@import "base/helper-classes";
+@import "base/animations";
+
+// === VENDOR
+@import "vendor/**";
+
+// === ELEMENTS
+@import "elements/**";
+
+// === SVG DIMENSIONS
+@import "../svg/symbol/svg-dimensions";
+
+// === MODULES (most styles should go here)
+@import "modules/**";
